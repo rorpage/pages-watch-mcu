@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pages Watch MCU</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700|Roboto+Slab:100,300,400,700" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <style>
+    body {
+      background-color: #f0131e;
+      color: #ffffff;
+      font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    }
+
+    h2,
+    .card-title {
+      font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+    }
+
+    .card-content {
+      color: #000000;
+    }
+
+    .card-title {
+      font-weight: 900;
+      font-size: 2rem;
+    }
+
+    .container {
+      text-align: center;
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="container">
+    <div id="up-next">
+      <h2>Up Next</h2>
+      <div class="row">
+        <div class="col s12 m4 offset-m4 l4 offset-l4">
+          <div class="card">
+            <div class="card-image">
+              <div id="card-image"></div>
+            </div>
+            <div class="card-content">
+              <h5>Followed by:</h5>
+              <div id="upcoming-movies"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="previously-watched">
+      <h2>Previously Watched</h2>
+      <div class="row">
+        <div class="col s12 m4 offset-m4 l4 offset-l4">
+          <div class="card">
+            <div class="card-content">
+              <h5>Started June 5, 2021</h5>
+              <div id="watched-movies"></div>
+              <h5>Finished August 18, 2021</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/handlebars.js"></script>
+  <script>
+    var index = 21;
+
+    var movies = [
+      {
+        src: 'captain_america_the_first_avenger.jpg',
+        title: 'Captain America: The First Avenger',
+      },
+      {
+        src: 'captain_marvel.jpg',
+        title: 'Captain Marvel',
+      },
+      {
+        src: 'iron_man.jpg',
+        title: 'Iron Man',
+      },
+      {
+        src: 'iron_man_2.jpg',
+        title: 'Iron Man 2',
+      },
+      {
+        src: 'thor.jpg',
+        title: 'Thor',
+      },
+      {
+        src: 'avengers.jpg',
+        title: 'Avengers',
+      },
+      {
+        src: 'iron_man_3.jpg',
+        title: 'Iron Man 3',
+      },
+      {
+        src: 'thor_the_dark_world.jpg',
+        title: 'Thor: The Dark World',
+      },
+      {
+        src: 'captain_america_the_winter_soldier.jpg',
+        title: 'Captain America: The Winter Soldier',
+      },
+      {
+        src: 'guardians_of_the_galaxy.jpg',
+        title: 'Guardians of the Galaxy',
+      },
+      {
+        src: 'guardians_of_the_galaxy_2.jpg',
+        title: 'Guardians of the Galaxy 2',
+      },
+      {
+        src: 'avengers_age_of_ultron.jpg',
+        title: 'Avengers: Age of Ultron',
+      },
+      {
+        src: 'ant-man.jpg',
+        title: 'Ant-Man',
+      },
+      {
+        src: 'captain_america_civil_war.jpg',
+        title: 'Captain America: Civil War',
+      },
+      {
+        src: 'black_panther.jpg',
+        title: 'Black Panther',
+      },
+      {
+        src: 'spider-man_homecoming.jpg',
+        title: 'Spider-Man: Homecoming',
+      },
+      {
+        src: 'doctor_strange.jpg',
+        title: 'Doctor Strange',
+      },
+      {
+        src: 'thor_ragnarok.jpg',
+        title: 'Thor: Ragnarok',
+      },
+      {
+        src: 'ant-man_and_the_wasp.jpg',
+        title: 'Ant-Man and the Wasp',
+      },
+      {
+        src: 'avengers_infinity_war.jpg',
+        title: 'Avengers: Infinity War',
+      },
+      {
+        src: 'avengers_endgame.jpg',
+        title: 'Avengers: Endgame',
+      },
+    ];
+
+    var imageTemplate = Handlebars.compile(
+      '<img src="img/{{src}}" alt="{{title}}" />'
+    );
+
+    var compiledImageHtml = imageTemplate(movies[index]);
+    document.getElementById('card-image').innerHTML = compiledImageHtml;
+
+    var listItemTemplate = Handlebars.compile(
+      '<ul>{{#each movies}}<li>{{title}}</li>{{else}}None!{{/each}}</ul>'
+    );
+
+    var watchedMovies = movies.slice(0, index);
+    var watchedMoviesHtml = listItemTemplate({ movies: watchedMovies });
+    document.getElementById('watched-movies').innerHTML = watchedMoviesHtml;
+
+    var upcomingMovies = movies.slice(index + 1);
+    var upcomingMoviesHtml = listItemTemplate({ movies: upcomingMovies });
+    document.getElementById('upcoming-movies').innerHTML = upcomingMoviesHtml;
+  </script>
+</body>
+
+</html>
