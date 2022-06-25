@@ -172,14 +172,6 @@
       {
         src: 'spiderman_no_way_home.jpg',
         title: 'Spider-Man: No Way Home'
-      },
-      {
-        src: 'eternals.jpg',
-        title: 'Eternals'
-      },
-      {
-        src: 'doctor_strange_in_the_multiverse_of_madness.jpg',
-        title: 'Doctor Strange in the Multiverse of Madness'
       }
     ];
 
@@ -188,19 +180,39 @@
     );
 
     var compiledImageHtml = imageTemplate(movies[index]);
-    document.getElementById('card-image').innerHTML = compiledImageHtml;
+    $('card-image', compiledImageHtml);
 
     var listItemTemplate = Handlebars.compile(
       '<ul>{{#each movies}}<li>{{title}}</li>{{else}}None!{{/each}}</ul>'
     );
 
     var watchedMovies = movies.slice(0, index);
-    var watchedMoviesHtml = listItemTemplate({ movies: watchedMovies });
-    document.getElementById('watched-movies').innerHTML = watchedMoviesHtml;
+
+    // Add not watched or skipped movies
+    watchedMovies.push(
+      {
+        src: 'eternals.jpg',
+        title: '(Eternals)'
+      },
+      {
+        src: 'doctor_strange_in_the_multiverse_of_madness.jpg',
+        title: 'Doctor Strange in the Multiverse of Madness'
+      }
+    );
+
+    renderHtml('watched-movies', watchedMovies);
 
     var upcomingMovies = movies.slice(index + 1);
-    var upcomingMoviesHtml = listItemTemplate({ movies: upcomingMovies });
-    document.getElementById('upcoming-movies').innerHTML = upcomingMoviesHtml;
+    renderHtml('upcoming-movies', upcomingMovies);
+
+    function renderHtml(id, array) {
+      var html = listItemTemplate({ movies: array });
+      $(id, html);
+    }
+
+    function $(id, value) {
+      document.getElementById(id).innerHTML = value;
+    }
   </script>
 </body>
 
