@@ -175,16 +175,10 @@
       }
     ];
 
-    var imageTemplate = Handlebars.compile(
-      '<img src="img/{{src}}" alt="{{title}}" />'
-    );
+    const imageTemplateHtml = '<img src="img/{{src}}" alt="{{title}}" />';
+    renderHtml(imageTemplateHtml, 'card-image', movies[index]);
 
-    var compiledImageHtml = imageTemplate(movies[index]);
-    $('card-image', compiledImageHtml);
-
-    var listItemTemplate = Handlebars.compile(
-      '<ul>{{#each movies}}<li>{{title}}</li>{{else}}None!{{/each}}</ul>'
-    );
+    const itemListHtml = '<ul>{{#each movies}}<li>{{title}}</li>{{else}}None!{{/each}}</ul>';
 
     var watchedMovies = movies.slice(0, index);
 
@@ -200,18 +194,16 @@
       }
     );
 
-    renderHtml('watched-movies', watchedMovies);
+    renderHtml(itemListHtml, 'watched-movies', { movies: watchedMovies });
 
     var upcomingMovies = movies.slice(index + 1);
-    renderHtml('upcoming-movies', upcomingMovies);
+    renderHtml(itemListHtml, 'upcoming-movies', { movies: upcomingMovies });
 
-    function renderHtml(id, array) {
-      var html = listItemTemplate({ movies: array });
-      $(id, html);
-    }
+    function renderHtml(template, id, item) {
+      var template = Handlebars.compile(template);
+      var html = template(item);
 
-    function $(id, value) {
-      document.getElementById(id).innerHTML = value;
+      document.getElementById(id).innerHTML = html;
     }
   </script>
 </body>
