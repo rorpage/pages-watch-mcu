@@ -200,8 +200,8 @@
     renderHtml(itemListHtml, 'upcoming-movies', { movies: upcomingMovies });
 
     function renderHtml(template, id, item) {
-      var template = Handlebars.compile(template);
-      var html = template(item);
+      var compiledTemplate = Handlebars.compile(template);
+      var html = compiledTemplate(item);
 
       document.getElementById(id).innerHTML = html;
     }
