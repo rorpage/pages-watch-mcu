@@ -2,20 +2,11 @@
   "name": "mcu-api",
   "version": "1.0.0",
   "description": "",
-  "main": "info.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rorpage/pages-watch-mcu.git"
-  },
   "author": "Robbie Page (rorpage@gmail.com)",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/rorpage/pages-watch-mcu/issues"
-  },
-  "homepage": "https://github.com/rorpage/pages-watch-mcu#readme",
   "dependencies": {
     "@keyv/redis": "^2.3.7",
     "keyv": "^4.3.2"
