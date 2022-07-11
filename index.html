@@ -57,7 +57,7 @@
         <div class="col s12 m4 offset-m4 l4 offset-l4">
           <div class="card">
             <div class="card-content">
-              <h5>Started June 10, 2022</h5>
+              <h5 id="start-date"></h5>
               <div id="watched-movies"></div>
             </div>
           </div>
@@ -70,8 +70,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="js/handlebars.js"></script>
   <script>
-    var index = 8;
-
     var movies = [
       {
         src: 'captain_america_the_first_avenger.jpg',
@@ -179,25 +177,35 @@
       }
     ];
 
-    const imageTemplateHtml = '<img src="img/{{src}}" alt="{{title}}" />';
-    renderHtml(imageTemplateHtml, 'card-image', movies[index]);
+    fetch('api/info')
+      .then(response => response.json())
+      .then(data => renderLists(data));
 
-    const itemListHtml = '<ul>{{#each movies}}<li>{{title}}</li>{{else}}None!{{/each}}</ul>';
+    function renderLists(data) {
+      document.getElementById('start-date').innerHTML = `Started ${data.startDate}`;
 
-    var watchedMovies = movies.slice(0, index);
+      const index = data.index;
 
-    // Add not watched or skipped movies
-    watchedMovies.push(
-      {
-        src: 'doctor_strange_in_the_multiverse_of_madness.jpg',
-        title: 'Doctor Strange in the Multiverse of Madness'
-      }
-    );
+      const imageTemplateHtml = '<img src="img/{{src}}" alt="{{title}}" />';
+      renderHtml(imageTemplateHtml, 'card-image', movies[index]);
 
-    renderHtml(itemListHtml, 'watched-movies', { movies: watchedMovies });
+      const itemListHtml = '<ul>{{#each movies}}<li>{{title}}</li>{{else}}None!{{/each}}</ul>';
 
-    var upcomingMovies = movies.slice(index + 1);
-    renderHtml(itemListHtml, 'upcoming-movies', { movies: upcomingMovies });
+      var watchedMovies = movies.slice(0, index);
+
+      // Add not watched or skipped movies
+      watchedMovies.push(
+        {
+          src: 'doctor_strange_in_the_multiverse_of_madness.jpg',
+          title: 'Doctor Strange in the Multiverse of Madness'
+        }
+      );
+
+      renderHtml(itemListHtml, 'watched-movies', { movies: watchedMovies });
+
+      var upcomingMovies = movies.slice(index + 1);
+      renderHtml(itemListHtml, 'upcoming-movies', { movies: upcomingMovies });
+    }
 
     function renderHtml(template, id, item) {
       var compiledTemplate = Handlebars.compile(template);
