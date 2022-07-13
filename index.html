@@ -33,6 +33,18 @@
     .container {
       text-align: center;
     }
+
+    .collection-item.avatar {
+      text-align: left;
+    }
+
+    .full-poster {
+      margin-bottom: 8px;
+    }
+
+    .gray {
+      color: #acacac;
+    }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -76,134 +88,160 @@
   <script>
     var movies = [
       {
+        release_date: 'July 22, 2011',
+        runtime: '2 hours 4 minutes',
         src: 'captain_america_the_first_avenger.jpg',
-        title: 'Captain America: The First Avenger',
-        year: 2011
+        title: 'Captain America: The First Avenger'
       },
       {
+        release_date: 'March 8, 2019',
+        runtime: '2 hours 3 minutes',
         src: 'captain_marvel.jpg',
-        title: 'Captain Marvel',
-        year: 2019
+        title: 'Captain Marvel'
       },
       {
+        release_date: 'May 2, 2008',
+        runtime: '2 hours 6 minutes',
         src: 'iron_man.jpg',
-        title: 'Iron Man',
-        year: 2008
+        title: 'Iron Man'
       },
       {
+        release_date: 'May 7, 2010',
+        runtime: '2 hours 4 minutes',
         src: 'iron_man_2.jpg',
-        title: 'Iron Man 2',
-        year: 2010
+        title: 'Iron Man 2'
       },
       {
+        release_date: 'May 6, 2011',
+        runtime: '1 hour 55 minutes',
         src: 'thor.jpg',
-        title: 'Thor',
-        year: 2011
+        title: 'Thor'
       },
       {
+        release_date: 'May 4, 2012',
+        runtime: '2 hours 23 minutes',
         src: 'avengers.jpg',
-        title: 'Avengers',
-        year: 2012
+        title: 'Avengers'
       },
       {
+        release_date: 'November 8, 2013',
+        runtime: '1 hour 52 minutes',
         src: 'thor_the_dark_world.jpg',
-        title: 'Thor: The Dark World',
-        year: 2013
+        title: 'Thor: The Dark World'
       },
       {
+        release_date: 'May 3, 2013',
+        runtime: '2 hours 10 minutes',
         src: 'iron_man_3.jpg',
-        title: 'Iron Man 3',
-        year: 2013
+        title: 'Iron Man 3'
       },
       {
+        release_date: 'April 4, 2014',
+        runtime: '2 hours 16 minutes',
         src: 'captain_america_the_winter_soldier.jpg',
-        title: 'Captain America: The Winter Soldier',
-        year: 2014
+        title: 'Captain America: The Winter Soldier'
       },
       {
+        release_date: 'August 1, 2014',
+        runtime: '2 hours 1 minute',
         src: 'guardians_of_the_galaxy.jpg',
-        title: 'Guardians of the Galaxy',
-        year: 2014
+        title: 'Guardians of the Galaxy'
       },
       {
+        release_date: 'May 5, 2017',
+        runtime: '2 hours 16 minutes',
         src: 'guardians_of_the_galaxy_2.jpg',
-        title: 'Guardians of the Galaxy 2',
-        year: 2017
+        title: 'Guardians of the Galaxy 2'
       },
       {
+        release_date: 'May 1, 2015',
+        runtime: '2 hours 21 minutes',
         src: 'avengers_age_of_ultron.jpg',
-        title: 'Avengers: Age of Ultron',
-        year: 2015
+        title: 'Avengers: Age of Ultron'
       },
       {
+        release_date: 'July 17, 2015',
+        runtime: '1 hour 57 minutes',
         src: 'ant-man.jpg',
-        title: 'Ant-Man',
-        year: 2015
+        title: 'Ant-Man'
       },
       {
+        release_date: 'May 6, 2016',
+        runtime: '2 hours 27 minutes',
         src: 'captain_america_civil_war.jpg',
-        title: 'Captain America: Civil War',
-        year: 2016
+        title: 'Captain America: Civil War'
       },
       {
+        release_date: 'February 16, 2018',
+        runtime: '2 hours 14 minutes',
         src: 'black_panther.jpg',
-        title: 'Black Panther',
-        year: 2018
+        title: 'Black Panther'
       },
       {
+        release_date: 'July 7, 2017',
+        runtime: '2 hours 13 minutes',
         src: 'spider-man_homecoming.jpg',
-        title: 'Spider-Man: Homecoming',
-        year: 2017
+        title: 'Spider-Man: Homecoming'
       },
       {
+        release_date: 'July 9, 2021',
+        runtime: '2 hours 14 minutes',
         src: 'black_widow.jpg',
-        title: 'Black Widow',
-        year: 2021
+        title: 'Black Widow'
       },
       {
+        release_date: 'November 4, 2016',
+        runtime: '1 hour 55 minutes',
         src: 'doctor_strange.jpg',
-        title: 'Doctor Strange',
-        year: 2016
+        title: 'Doctor Strange'
       },
       {
+        release_date: 'November 3, 2017',
+        runtime: '2 hours 10 minutes',
         src: 'thor_ragnarok.jpg',
-        title: 'Thor: Ragnarok',
-        year: 2017
+        title: 'Thor: Ragnarok'
       },
       {
+        release_date: 'July 6, 2018',
+        runtime: '1 hour 58 minutes',
         src: 'ant-man_and_the_wasp.jpg',
-        title: 'Ant-Man and the Wasp',
-        year: 2018
+        title: 'Ant-Man and the Wasp'
       },
       {
+        release_date: 'April 27, 2018',
+        runtime: '2 hours 29 minutes',
         src: 'avengers_infinity_war.jpg',
-        title: 'Avengers: Infinity War',
-        year: 2018
+        title: 'Avengers: Infinity War'
       },
       {
+        release_date: 'April 26, 2019',
+        runtime: '3 hours 1 minute',
         src: 'avengers_endgame.jpg',
-        title: 'Avengers: Endgame',
-        year: 2019
+        title: 'Avengers: Endgame'
       },
       {
+        release_date: 'July 2, 2019',
+        runtime: '2 hours 9 minutes',
         src: 'spiderman_far_from_home.jpg',
-        title: 'Spider-Man: Far from Home',
-        year: 2019
+        title: 'Spider-Man: Far from Home'
       },
       {
+        release_date: 'November 5, 2021',
+        runtime: '2 hours 36 minutes',
         src: 'eternals.jpg',
-        title: 'Eternals',
-        year: 2021
+        title: 'Eternals'
       },
       {
+        release_date: 'September 3, 2021',
+        runtime: '2 hours 12 minutes',
         src: 'shang_chi.jpg',
-        title: 'Shang-Chi and the Legend of the Ten Rings',
-        year: 2021
+        title: 'Shang-Chi and the Legend of the Ten Rings'
       },
       {
+        release_date: 'December 17, 2021',
+        runtime: '2 hours 28 minutes',
         src: 'spiderman_no_way_home.jpg',
-        title: 'Spider-Man: No Way Home',
-        year: 2021
+        title: 'Spider-Man: No Way Home'
       }
     ];
 
@@ -216,19 +254,34 @@
 
       const index = data.index;
 
-      const imageTemplateHtml = '<img src="img/{{src}}" alt="{{title}}" /><div>Released in {{year}}</div>';
+      const imageTemplateHtml = '<img class="full-poster" src="img/{{src}}" alt="{{title}}" />'
+        + '<div class="gray">{{release_date}}<br />{{runtime}}</div>';
+
       renderHtml(imageTemplateHtml, 'card-image', movies[index]);
 
-      const itemListHtml = '<ul>{{#each movies}}<li>{{title}} ({{year}})</li>{{else}}None!{{/each}}</ul>';
+      const itemListHtml = '<ul class="collection">'
+        + '{{#each movies}}'
+        + '<li class="collection-item avatar">'
+        + '<img src="img/{{src}}" alt="{{title}}" class="circle">'
+        + '<span class="title">{{title}}</span>'
+        + '<p class="gray">'
+        + '{{release_date}}'
+        + '<br />'
+        + '{{runtime}}'
+        + '</p>'
+        + '</li>'
+        + '{{else}}None!{{/each}}'
+        + '</ul>';
 
       var watchedMovies = movies.slice(0, index);
 
       // Add not watched or skipped movies
       watchedMovies.push(
         {
+          release_date: 'May 6, 2022',
+          runtime: '2 hours 6 minutes',
           src: 'doctor_strange_in_the_multiverse_of_madness.jpg',
-          title: 'Doctor Strange in the Multiverse of Madness',
-          year: 2022
+          title: 'Doctor Strange in the Multiverse of Madness'
         }
       );
 
