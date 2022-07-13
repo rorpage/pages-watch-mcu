@@ -296,13 +296,18 @@
 
       renderHtml(imageTemplateHtml, 'card-image', movies[index]);
 
+      Handlebars.registerPartial(
+        'movie',
+        '<li class="collection-item avatar">'
+          + '<img src="img/{{src}}" alt="{{title}}" class="circle">'
+          + '<span class="title">{{title}}</span>'
+          + subtitle
+          + '</li>'
+      );
+
       const itemListHtml = '<ul class="collection">'
         + '{{#each movies}}'
-        + '<li class="collection-item avatar">'
-        + '<img src="img/{{src}}" alt="{{title}}" class="circle">'
-        + '<span class="title">{{title}}</span>'
-        + subtitle
-        + '</li>'
+        + '{{>movie movie=.}}'
         + '{{else}}None!{{/each}}'
         + '</ul>';
 
