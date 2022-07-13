@@ -290,8 +290,9 @@
 
       const index = data.index;
 
-      const imageTemplateHtml = '<img class="full-poster" src="img/{{src}}" alt="{{title}}" />'
-        + '<div class="gray">{{release_date}} &#183; {{rating}} &#183; {{runtime}}</div>';
+      const subtitle = '<div class="gray">{{release_date}} &#183; {{rating}} &#183; {{runtime}}</div>';
+
+      const imageTemplateHtml = '<img class="full-poster" src="img/{{src}}" alt="{{title}}" />' + subtitle;
 
       renderHtml(imageTemplateHtml, 'card-image', movies[index]);
 
@@ -300,9 +301,7 @@
         + '<li class="collection-item avatar">'
         + '<img src="img/{{src}}" alt="{{title}}" class="circle">'
         + '<span class="title">{{title}}</span>'
-        + '<p class="gray">'
-        + '{{release_date}} &#183; {{rating}} &#183; {{runtime}}'
-        + '</p>'
+        + subtitle
         + '</li>'
         + '{{else}}None!{{/each}}'
         + '</ul>';
