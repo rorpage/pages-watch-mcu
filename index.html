@@ -21,6 +21,10 @@
       color: #000000;
     }
 
+    .card-image {
+      color: #000000;
+    }
+
     .card-title {
       font-weight: 900;
       font-size: 2rem;
@@ -74,106 +78,132 @@
       {
         src: 'captain_america_the_first_avenger.jpg',
         title: 'Captain America: The First Avenger',
+        year: 2011
       },
       {
         src: 'captain_marvel.jpg',
         title: 'Captain Marvel',
+        year: 2019
       },
       {
         src: 'iron_man.jpg',
         title: 'Iron Man',
+        year: 2008
       },
       {
         src: 'iron_man_2.jpg',
         title: 'Iron Man 2',
+        year: 2010
       },
       {
         src: 'thor.jpg',
         title: 'Thor',
+        year: 2011
       },
       {
         src: 'avengers.jpg',
         title: 'Avengers',
+        year: 2012
       },
       {
         src: 'thor_the_dark_world.jpg',
         title: 'Thor: The Dark World',
+        year: 2013
       },
       {
         src: 'iron_man_3.jpg',
         title: 'Iron Man 3',
+        year: 2013
       },
       {
         src: 'captain_america_the_winter_soldier.jpg',
         title: 'Captain America: The Winter Soldier',
+        year: 2014
       },
       {
         src: 'guardians_of_the_galaxy.jpg',
         title: 'Guardians of the Galaxy',
+        year: 2014
       },
       {
         src: 'guardians_of_the_galaxy_2.jpg',
         title: 'Guardians of the Galaxy 2',
+        year: 2017
       },
       {
         src: 'avengers_age_of_ultron.jpg',
         title: 'Avengers: Age of Ultron',
+        year: 2015
       },
       {
         src: 'ant-man.jpg',
         title: 'Ant-Man',
+        year: 2015
       },
       {
         src: 'captain_america_civil_war.jpg',
         title: 'Captain America: Civil War',
-      },
-      {
-        src: 'black_widow.jpg',
-        title: 'Black Widow',
-      },
-      {
-        src: 'spider-man_homecoming.jpg',
-        title: 'Spider-Man: Homecoming',
+        year: 2016
       },
       {
         src: 'black_panther.jpg',
         title: 'Black Panther',
+        year: 2018
+      },
+      {
+        src: 'spider-man_homecoming.jpg',
+        title: 'Spider-Man: Homecoming',
+        year: 2017
+      },
+      {
+        src: 'black_widow.jpg',
+        title: 'Black Widow',
+        year: 2021
       },
       {
         src: 'doctor_strange.jpg',
         title: 'Doctor Strange',
+        year: 2016
       },
       {
         src: 'thor_ragnarok.jpg',
         title: 'Thor: Ragnarok',
+        year: 2017
       },
       {
         src: 'ant-man_and_the_wasp.jpg',
         title: 'Ant-Man and the Wasp',
+        year: 2018
       },
       {
         src: 'avengers_infinity_war.jpg',
         title: 'Avengers: Infinity War',
+        year: 2018
       },
       {
         src: 'avengers_endgame.jpg',
         title: 'Avengers: Endgame',
-      },
-      {
-        src: 'shang_chi.jpg',
-        title: 'Shang-Chi and the Legend of the Ten Rings'
-      },
-      {
-        src: 'eternals.jpg',
-        title: 'Eternals'
+        year: 2019
       },
       {
         src: 'spiderman_far_from_home.jpg',
-        title: 'Spider-Man: Far from Home'
+        title: 'Spider-Man: Far from Home',
+        year: 2019
+      },
+      {
+        src: 'eternals.jpg',
+        title: 'Eternals',
+        year: 2021
+      },
+      {
+        src: 'shang_chi.jpg',
+        title: 'Shang-Chi and the Legend of the Ten Rings',
+        year: 2021
       },
       {
         src: 'spiderman_no_way_home.jpg',
-        title: 'Spider-Man: No Way Home'
+        title: 'Spider-Man: No Way Home',
+        year: 2021
       }
     ];
 
@@ -186,10 +216,10 @@
 
       const index = data.index;
 
-      const imageTemplateHtml = '<img src="img/{{src}}" alt="{{title}}" />';
+      const imageTemplateHtml = '<img src="img/{{src}}" alt="{{title}}" /><div>Released in {{year}}</div>';
       renderHtml(imageTemplateHtml, 'card-image', movies[index]);
 
-      const itemListHtml = '<ul>{{#each movies}}<li>{{title}}</li>{{else}}None!{{/each}}</ul>';
+      const itemListHtml = '<ul>{{#each movies}}<li>{{title}} ({{year}})</li>{{else}}None!{{/each}}</ul>';
 
       var watchedMovies = movies.slice(0, index);
 
@@ -197,7 +227,8 @@
       watchedMovies.push(
         {
           src: 'doctor_strange_in_the_multiverse_of_madness.jpg',
-          title: 'Doctor Strange in the Multiverse of Madness'
+          title: 'Doctor Strange in the Multiverse of Madness',
+          year: 2022
         }
       );
 
