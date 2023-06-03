@@ -9,7 +9,7 @@ export default async function handler(req, res) {
 
   mcu.on('error', err => console.log('Connection Error', err));
 
-  let response = { startDate: 'June 10, 2022' };
+  let response = { startDate: 'June 3, 2023' };
 
   response.index = await mcu.get('index');
 
