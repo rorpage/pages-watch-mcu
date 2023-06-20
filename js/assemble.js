@@ -197,7 +197,7 @@ fetch('api/info')
   .then(response => response.json())
   .then(data => renderLists(data));
 
-const imageBaseUrl = `https://sancusrorpage.blob.core.windows.net/images/mcu/`;
+const imageBaseUrl = 'https://sancusrorpage.blob.core.windows.net/images/mcu/';
 
 function renderLists(data) {
   document.getElementById('start-date').innerHTML = `Started ${data.startDate}`;
