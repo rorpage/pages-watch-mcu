@@ -1,0 +1,49 @@
+body {
+  background-color: #e62429;
+  color: #ffffff;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+h2,
+.card-title {
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+}
+
+.card-content {
+  color: #000000;
+}
+
+.card-image {
+  color: #000000;
+}
+
+.card-title {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.collection {
+  border: none;
+}
+
+.collection-item {
+  line-height: normal;
+}
+
+.collection-item.avatar {
+  min-height: auto !important;
+  text-align: left;
+}
+
+.container {
+  text-align: center;
+}
+
+.full-poster {
+  margin-bottom: 8px;
+}
+
+.gray {
+  color: #acacac;
+  font-size: 13px;
+}
