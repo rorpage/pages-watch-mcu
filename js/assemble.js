@@ -99,17 +99,17 @@ const movies = [
   },
   {
     rating: 'PG-13',
-    release_date: 'July 7, 2017',
-    runtime: '2h 13m',
-    src: 'spider-man_homecoming.jpg',
-    title: 'Spider-Man: Homecoming'
-  },
-  {
-    rating: 'PG-13',
     release_date: 'February 16, 2018',
     runtime: '2h 14m',
     src: 'black_panther.jpg',
     title: 'Black Panther'
+  },
+  {
+    rating: 'PG-13',
+    release_date: 'July 7, 2017',
+    runtime: '2h 13m',
+    src: 'spider-man_homecoming.jpg',
+    title: 'Spider-Man: Homecoming'
   },
   {
     rating: 'PG-13',
