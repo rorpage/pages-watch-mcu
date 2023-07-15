@@ -74,7 +74,7 @@ const movies = [
     release_date: 'May 5, 2017',
     runtime: '2h 16m',
     src: 'guardians_of_the_galaxy_2.jpg',
-    title: 'Guardians of the Galaxy 2'
+    title: 'Guardians of the Galaxy Vol. 2'
   },
   {
     rating: 'PG-13',
@@ -173,6 +173,34 @@ const movies = [
     runtime: '2h 28m',
     src: 'spiderman_no_way_home.jpg',
     title: 'Spider-Man: No Way Home'
+  },
+  {
+    rating: 'PG-13',
+    release_date: 'June 23, 2022',
+    runtime: '1h 58m',
+    src: 'thor_love_and_thunder.jpg',
+    title: 'Thor: Love and Thunder'
+  },
+  {
+    rating: 'PG-13',
+    release_date: 'November 11, 2022',
+    runtime: '2h 41m',
+    src: 'black_panther_wakanda_forever.jpg',
+    title: 'Black Panther: Wakanda Forever'
+  },
+  {
+    rating: 'PG-13',
+    release_date: 'February 17, 2023',
+    runtime: '2h 5m',
+    src: 'ant_man_and_the_wasp_quantumania.jpg',
+    title: 'Ant-Man and The Wasp: Quantumania'
+  },
+  {
+    rating: 'PG-13',
+    release_date: 'May 5, 2023',
+    runtime: '2h 29m',
+    src: 'guardians_of_the_galaxy_3.jpg',
+    title: 'Guardians of the Galaxy Vol. 3'
   }
 ];
 
