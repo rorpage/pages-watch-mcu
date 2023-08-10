@@ -162,13 +162,6 @@ const movies = [
   },
   {
     rating: 'PG-13',
-    release_date: 'September 3, 2021',
-    runtime: '2h 12m',
-    src: 'shang_chi.jpg',
-    title: 'Shang-Chi and the Legend of the Ten Rings'
-  },
-  {
-    rating: 'PG-13',
     release_date: 'December 17, 2021',
     runtime: '2h 28m',
     src: 'spiderman_no_way_home.jpg',
@@ -176,10 +169,10 @@ const movies = [
   },
   {
     rating: 'PG-13',
-    release_date: 'June 23, 2022',
-    runtime: '1h 58m',
-    src: 'thor_love_and_thunder.jpg',
-    title: 'Thor: Love and Thunder'
+    release_date: 'September 3, 2021',
+    runtime: '2h 12m',
+    src: 'shang_chi.jpg',
+    title: 'Shang-Chi and the Legend of the Ten Rings'
   },
   {
     rating: 'PG-13',
@@ -187,13 +180,6 @@ const movies = [
     runtime: '2h 41m',
     src: 'black_panther_wakanda_forever.jpg',
     title: 'Black Panther: Wakanda Forever'
-  },
-  {
-    rating: 'PG-13',
-    release_date: 'February 17, 2023',
-    runtime: '2h 5m',
-    src: 'ant_man_and_the_wasp_quantumania.jpg',
-    title: 'Ant-Man and The Wasp: Quantumania'
   },
   {
     rating: 'PG-13',
@@ -218,6 +204,20 @@ const skippedMovies = [
     runtime: '2h 6m',
     src: 'doctor_strange_in_the_multiverse_of_madness.jpg',
     title: 'Doctor Strange in the Multiverse of Madness'
+  },
+  {
+    rating: 'PG-13',
+    release_date: 'June 23, 2022',
+    runtime: '1h 58m',
+    src: 'thor_love_and_thunder.jpg',
+    title: 'Thor: Love and Thunder'
+  },
+  {
+    rating: 'PG-13',
+    release_date: 'February 17, 2023',
+    runtime: '2h 5m',
+    src: 'ant_man_and_the_wasp_quantumania.jpg',
+    title: 'Ant-Man and The Wasp: Quantumania'
   }
 ];
 
