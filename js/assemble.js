@@ -228,11 +228,15 @@ fetch('api/info')
 const imageBaseUrl = 'https://cdn-rorpage-01.azureedge.net/images/mcu/';
 
 function renderLists(data) {
-  document.getElementById('start-date').innerHTML = `Started ${data.startDate}`;
+  document.body.style.background = data.background_color;
+
+  document.getElementById('start-date').innerHTML = `Started ${data.start_date}`;
 
   const index = data.index;
 
-  renderUpNextMoviePoster(index);
+  if (index < movies.length) {
+    renderUpNextMoviePoster(index);
+  }
 
   const subtitle = '<div class="gray">{{release_date}} &#183; {{runtime}}</div>';
 
