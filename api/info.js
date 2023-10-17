@@ -9,12 +9,18 @@ export default async function handler(req, res) {
 
   mcu.on('error', err => console.log('Connection Error', err));
 
-  let response = {
-    background_color: '#e62429',
-    start_date: 'June 3, 2023'
-  };
+  const data = await mcu.get('data');
 
-  response.index = await mcu.get('index');
+  let background_color = '#000000';
+
+  if (data.series === 0) {
+    background_color = '#e62429';
+  }
+
+  const response = {
+    ...data,
+    background_color
+  };
 
   return res.json(response);
 }
