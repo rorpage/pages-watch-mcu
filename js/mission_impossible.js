@@ -8,13 +8,6 @@ const missionImpossibleMovies = [
   },
   {
     rating: 'PG-13',
-    release_date: 'May 24, 2000',
-    runtime: '2h 3m',
-    src: '/mi/mi2.jpg',
-    title: 'Mission: Impossible 2'
-  },
-  {
-    rating: 'PG-13',
     release_date: 'May 5, 2006',
     runtime: '2h 6m',
     src: '/mi/mi3.jpg',
@@ -57,4 +50,12 @@ const missionImpossibleMovies = [
   // }
 ];
 
-const skippedMissionImpossibleMovies = [];
+const skippedMissionImpossibleMovies = [
+  {
+    rating: 'PG-13',
+    release_date: 'May 24, 2000',
+    runtime: '2h 3m',
+    src: '/mi/mi2.jpg',
+    title: 'Mission: Impossible 2'
+  }
+];
