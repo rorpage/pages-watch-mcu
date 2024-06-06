@@ -1,8 +1,25 @@
+const imageBaseUrl = 'https://cdn-rorpage-01.azureedge.net/images';
+
+Handlebars.registerPartial(
+  'movie',
+  '<li class="collection-item avatar">'
+    + `<img src="${imageBaseUrl}{{src}}" alt="{{title}}" class="circle">`
+    + '<span class="title {{#if is_skipped}}gray{{/if}}">{{title}}</span>'
+    + '<div class="subtitle">{{release_date}} &#183; {{runtime}}</div>'
+    + '</li>'
+);
+
+const itemListHtml = '<ul class="collection">'
+  + '{{#each movies}}'
+  + '{{>movie movie=.}}'
+  + '{{else}}None!{{/each}}'
+  + '</ul>';
+
+const compiledTemplate = Handlebars.compile(itemListHtml);
+
 fetch('api/info')
   .then(response => response.json())
   .then(data => renderLists(data));
-
-const imageBaseUrl = 'https://cdn-rorpage-01.azureedge.net/images';
 
 function renderLists(data) {
   document.body.style.background = data.background_color;
@@ -10,43 +27,24 @@ function renderLists(data) {
   document.getElementById('title').innerHTML = `<h1>${data.title}</h1>`;
   document.getElementById('start-date').innerHTML = `Started ${data.start_date}`;
 
-  const index = data.index;
-  const movies = data.movies.all_movies;
-  const skippedMovies = data.movies.skipped;
-
   renderUpNextMoviePoster(data.movies.up_next);
 
-  const subtitle = '<div class="subtitle">{{release_date}} &#183; {{runtime}}</div>';
-
-  Handlebars.registerPartial(
-    'movie',
-    '<li class="collection-item avatar">'
-      + `<img src="${imageBaseUrl}{{src}}" alt="{{title}}" class="circle">`
-      + '<span class="title {{#if is_skipped}}gray{{/if}}">{{title}}</span>'
-      + subtitle
-      + '</li>'
-  );
-
-  const itemListHtml = '<ul class="collection">'
-    + '{{#each movies}}'
-    + '{{>movie movie=.}}'
-    + '{{else}}None!{{/each}}'
-    + '</ul>';
-
+  const index = data.index;
+  const movies = data.movies.all_movies;
   let watchedMovies = movies.slice(0, index);
 
   // Add not watched or skipped movies
-  skippedMovies.forEach((movie) => {
+  data.movies.skipped.forEach((movie) => {
     movie.is_skipped = true;
     movie.title = `${movie.title} [Skipped]`;
 
     watchedMovies.push(movie);
   });
 
-  renderHtml(itemListHtml, 'watched-movies', { movies: watchedMovies });
+  renderHtml('watched-movies', { movies: watchedMovies });
 
   const upcomingMovies = movies.slice(index + 1);
-  renderHtml(itemListHtml, 'upcoming-movies', { movies: upcomingMovies });
+  renderHtml('upcoming-movies', { movies: upcomingMovies });
 }
 
 function renderUpNextMoviePoster(upNextMovie) {
@@ -66,8 +64,7 @@ function renderUpNextMoviePoster(upNextMovie) {
   posterElement.appendChild(instance);
 }
 
-function renderHtml(template, id, item) {
-  const compiledTemplate = Handlebars.compile(template);
+function renderHtml(id, item) {
   const html = compiledTemplate(item);
 
   document.getElementById(id).innerHTML = html;
