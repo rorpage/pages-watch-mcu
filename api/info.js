@@ -1,3 +1,6 @@
+const marvel = require('../js/marvel.json');
+const skipped_marvel = require('../js/skipped_marvel.json');
+
 const KeyvRedis = require('@keyv/redis');
 const Keyv = require('keyv');
 
@@ -11,24 +14,17 @@ export default async function handler(req, res) {
 
   const data = await mcu.get('data');
 
-  let background_color = '#000000';
-  let title = 'Marvel';
-
-  if (data.series === 0) {
-    background_color = '#e62429';
-    title = 'Marvel';
-  } else if (data.series === 1) {
-    background_color = '#000000';
-    title = 'Mission: Impossible';
-  } else if (data.series === 2) {
-    background_color = '#000000';
-    title = 'Star Wars';
-  }
+  const up_next = marvel[data.index] ?? null;
 
   const response = {
+    movies: {
+      up_next,
+      all_movies: marvel,
+      skipped: skipped_marvel
+    },
     ...data,
-    background_color,
-    title
+    background_color: '#e62429',
+    title: 'Marvel'
   };
 
   return res.json(response);

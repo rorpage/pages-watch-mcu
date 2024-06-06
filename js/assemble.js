@@ -4,9 +4,6 @@ fetch('api/info')
 
 const imageBaseUrl = 'https://cdn-rorpage-01.azureedge.net/images';
 
-let movies = [];
-let skippedMovies = [];
-
 function renderLists(data) {
   document.body.style.background = data.background_color;
 
@@ -14,30 +11,18 @@ function renderLists(data) {
   document.getElementById('start-date').innerHTML = `Started ${data.start_date}`;
 
   const index = data.index;
-  const series = data.series;
+  const movies = data.movies.all_movies;
+  const skippedMovies = data.movies.skipped;
 
-  if (series === 0) {
-    movies = marvelMovies;
-    skippedMovies = skippedMarvelMovies;
-  } else if (series === 1) {
-    movies = missionImpossibleMovies;
-    skippedMovies = skippedMissionImpossibleMovies;
-  } else if (series === 2) {
-    movies = starWarsMovies;
-    skippedMovies = skippedStarWarsMovies;
-  }
+  renderUpNextMoviePoster(data.movies.up_next);
 
-  if (index < movies.length) {
-    renderUpNextMoviePoster(index);
-  }
-
-  const subtitle = '<div class="gray">{{release_date}} &#183; {{runtime}}</div>';
+  const subtitle = '<div class="subtitle">{{release_date}} &#183; {{runtime}}</div>';
 
   Handlebars.registerPartial(
     'movie',
     '<li class="collection-item avatar">'
       + `<img src="${imageBaseUrl}{{src}}" alt="{{title}}" class="circle">`
-      + '<span class="title">{{title}}</span>'
+      + '<span class="title {{#if is_skipped}}gray{{/if}}">{{title}}</span>'
       + subtitle
       + '</li>'
   );
@@ -52,6 +37,7 @@ function renderLists(data) {
 
   // Add not watched or skipped movies
   skippedMovies.forEach((movie) => {
+    movie.is_skipped = true;
     movie.title = `${movie.title} [Skipped]`;
 
     watchedMovies.push(movie);
@@ -63,8 +49,8 @@ function renderLists(data) {
   renderHtml(itemListHtml, 'upcoming-movies', { movies: upcomingMovies });
 }
 
-function renderUpNextMoviePoster(index) {
-  const upNextMovie = movies[index];
+function renderUpNextMoviePoster(upNextMovie) {
+  if (!upNextMovie) return;
 
   const element = document.getElementById('up-next-movie');
   const instance = document.importNode(element.content, true);
@@ -73,7 +59,7 @@ function renderUpNextMoviePoster(index) {
   poster.src = `${imageBaseUrl}${upNextMovie.src}`;
   poster.alt = upNextMovie.title;
 
-  const subtitle = instance.querySelector('.gray');
+  const subtitle = instance.querySelector('.subtitle');
   subtitle.innerHTML = `${upNextMovie.release_date} &#183; ${upNextMovie.runtime}`;
 
   const posterElement = document.getElementById('card-image');
