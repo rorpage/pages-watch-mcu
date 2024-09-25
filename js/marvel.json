@@ -2,189 +2,243 @@
   {
     "rating": "PG-13",
     "release_date": "July 22, 2011",
+    "release_date_raw": "2011-07-22",
     "runtime": "2h 4m",
+    "runtime_mins": 124,
     "src": "/mcu/captain_america_the_first_avenger.jpg",
     "title": "Captain America: The First Avenger"
   },
   {
     "rating": "PG-13",
     "release_date": "March 8, 2019",
+    "release_date_raw": "2019-03-08",
     "runtime": "2h 3m",
+    "runtime_mins": 123,
     "src": "/mcu/captain_marvel.jpg",
     "title": "Captain Marvel"
   },
   {
     "rating": "PG-13",
     "release_date": "May 2, 2008",
+    "release_date_raw": "2008-05-02",
     "runtime": "2h 6m",
+    "runtime_mins": 126,
     "src": "/mcu/iron_man.jpg",
     "title": "Iron Man"
   },
   {
     "rating": "PG-13",
     "release_date": "May 7, 2010",
+    "release_date_raw": "2010-05-07",
     "runtime": "2h 4m",
+    "runtime_mins": 124,
     "src": "/mcu/iron_man_2.jpg",
     "title": "Iron Man 2"
   },
   {
     "rating": "PG-13",
     "release_date": "May 6, 2011",
+    "release_date_raw": "2011-05-06",
     "runtime": "1h 55m",
+    "runtime_mins": 115,
     "src": "/mcu/thor.jpg",
     "title": "Thor"
   },
   {
     "rating": "PG-13",
     "release_date": "May 4, 2012",
+    "release_date_raw": "2012-05-04",
     "runtime": "2h 23m",
+    "runtime_mins": 143,
     "src": "/mcu/avengers.jpg",
     "title": "Avengers"
   },
   {
     "rating": "PG-13",
     "release_date": "November 8, 2013",
+    "release_date_raw": "2013-11-08",
     "runtime": "1h 52m",
+    "runtime_mins": 112,
     "src": "/mcu/thor_the_dark_world.jpg",
     "title": "Thor: The Dark World"
   },
   {
     "rating": "PG-13",
     "release_date": "May 3, 2013",
+    "release_date_raw": "2013-05-03",
     "runtime": "2h 10m",
+    "runtime_mins": 130,
     "src": "/mcu/iron_man_3.jpg",
     "title": "Iron Man 3"
   },
   {
     "rating": "PG-13",
     "release_date": "April 4, 2014",
+    "release_date_raw": "2014-04-04",
     "runtime": "2h 16m",
+    "runtime_mins": 136,
     "src": "/mcu/captain_america_the_winter_soldier.jpg",
     "title": "Captain America: The Winter Soldier"
   },
   {
     "rating": "PG-13",
     "release_date": "August 1, 2014",
+    "release_date_raw": "2014-08-01",
     "runtime": "2h 1m",
+    "runtime_mins": 121,
     "src": "/mcu/guardians_of_the_galaxy.jpg",
     "title": "Guardians of the Galaxy"
   },
   {
     "rating": "PG-13",
     "release_date": "May 5, 2017",
+    "release_date_raw": "2017-05-05",
     "runtime": "2h 16m",
+    "runtime_mins": 136,
     "src": "/mcu/guardians_of_the_galaxy_2.jpg",
     "title": "Guardians of the Galaxy Vol. 2"
   },
   {
     "rating": "PG-13",
     "release_date": "May 1, 2015",
+    "release_date_raw": "2015-05-01",
     "runtime": "2h 21m",
+    "runtime_mins": 141,
     "src": "/mcu/avengers_age_of_ultron.jpg",
     "title": "Avengers: Age of Ultron"
   },
   {
     "rating": "PG-13",
     "release_date": "July 17, 2015",
+    "release_date_raw": "2015-07-17",
     "runtime": "1h 57m",
+    "runtime_mins": 117,
     "src": "/mcu/ant-man.jpg",
     "title": "Ant-Man"
   },
   {
     "rating": "PG-13",
     "release_date": "May 6, 2016",
+    "release_date_raw": "2016-05-06",
     "runtime": "2h 27m",
+    "runtime_mins": 147,
     "src": "/mcu/captain_america_civil_war.jpg",
     "title": "Captain America: Civil War"
   },
   {
     "rating": "PG-13",
     "release_date": "February 16, 2018",
+    "release_date_raw": "2018-02-16",
     "runtime": "2h 14m",
+    "runtime_mins": 134,
     "src": "/mcu/black_panther.jpg",
     "title": "Black Panther"
   },
   {
     "rating": "PG-13",
     "release_date": "July 7, 2017",
+    "release_date_raw": "2017-07-07",
     "runtime": "2h 13m",
+    "runtime_mins": 133,
     "src": "/mcu/spider-man_homecoming.jpg",
     "title": "Spider-Man: Homecoming"
   },
   {
     "rating": "PG-13",
     "release_date": "July 9, 2021",
+    "release_date_raw": "2021-07-09",
     "runtime": "2h 14m",
+    "runtime_mins": 134,
     "src": "/mcu/black_widow.jpg",
     "title": "Black Widow"
   },
   {
     "rating": "PG-13",
     "release_date": "November 4, 2016",
+    "release_date_raw": "2016-11-04",
     "runtime": "1h 55m",
+    "runtime_mins": 115,
     "src": "/mcu/doctor_strange.jpg",
     "title": "Doctor Strange"
   },
   {
     "rating": "PG-13",
     "release_date": "November 3, 2017",
+    "release_date_raw": "2017-11-03",
     "runtime": "2h 10m",
+    "runtime_mins": 130,
     "src": "/mcu/thor_ragnarok.jpg",
     "title": "Thor: Ragnarok"
   },
   {
     "rating": "PG-13",
     "release_date": "July 6, 2018",
+    "release_date_raw": "2018-07-06",
     "runtime": "1h 58m",
+    "runtime_mins": 118,
     "src": "/mcu/ant-man_and_the_wasp.jpg",
     "title": "Ant-Man and the Wasp"
   },
   {
     "rating": "PG-13",
     "release_date": "April 27, 2018",
+    "release_date_raw": "2018-04-27",
     "runtime": "2h 29m",
+    "runtime_mins": 149,
     "src": "/mcu/avengers_infinity_war.jpg",
     "title": "Avengers: Infinity War"
   },
   {
     "rating": "PG-13",
     "release_date": "April 26, 2019",
+    "release_date_raw": "2019-04-26",
     "runtime": "3h 1m",
+    "runtime_mins": 181,
     "src": "/mcu/avengers_endgame.jpg",
     "title": "Avengers: Endgame"
   },
   {
     "rating": "PG-13",
     "release_date": "July 2, 2019",
+    "release_date_raw": "2019-07-02",
     "runtime": "2h 9m",
+    "runtime_mins": 129,
     "src": "/mcu/spiderman_far_from_home.jpg",
     "title": "Spider-Man: Far from Home"
   },
   {
     "rating": "PG-13",
     "release_date": "December 17, 2021",
+    "release_date_raw": "2021-12-17",
     "runtime": "2h 28m",
+    "runtime_mins": 148,
     "src": "/mcu/spiderman_no_way_home.jpg",
     "title": "Spider-Man: No Way Home"
   },
   {
     "rating": "PG-13",
     "release_date": "September 3, 2021",
+    "release_date_raw": "2021-09-03",
     "runtime": "2h 12m",
+    "runtime_mins": 132,
     "src": "/mcu/shang_chi.jpg",
     "title": "Shang-Chi and the Legend of the Ten Rings"
   },
   {
     "rating": "PG-13",
     "release_date": "November 11, 2022",
+    "release_date_raw": "2022-11-11",
     "runtime": "2h 41m",
+    "runtime_mins": 161,
     "src": "/mcu/black_panther_wakanda_forever.jpg",
     "title": "Black Panther: Wakanda Forever"
   },
   {
     "rating": "PG-13",
     "release_date": "May 5, 2023",
+    "release_date_raw": "2023-05-05",
     "runtime": "2h 29m",
+    "runtime_mins": 149,
     "src": "/mcu/guardians_of_the_galaxy_3.jpg",
     "title": "Guardians of the Galaxy Vol. 3"
   }

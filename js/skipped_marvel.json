@@ -2,28 +2,36 @@
   {
     "rating": "PG-13",
     "release_date": "November 5, 2021",
+    "release_date_raw": "2021-11-05",
     "runtime": "2h 36m",
+    "runtime_mins": 156,
     "src": "/mcu/eternals.jpg",
     "title": "Eternals"
   },
   {
     "rating": "PG-13",
     "release_date": "May 6, 2022",
+    "release_date_raw": "2022-05-06",
     "runtime": "2h 6m",
+    "runtime_mins": 126,
     "src": "/mcu/doctor_strange_in_the_multiverse_of_madness.jpg",
     "title": "Doctor Strange in the Multiverse of Madness"
   },
   {
     "rating": "PG-13",
     "release_date": "June 23, 2022",
+    "release_date_raw": "2022-06-23",
     "runtime": "1h 58m",
+    "runtime_mins": 118,
     "src": "/mcu/thor_love_and_thunder.jpg",
     "title": "Thor: Love and Thunder"
   },
   {
     "rating": "PG-13",
     "release_date": "February 17, 2023",
+    "release_date_raw": "2023-02-17",
     "runtime": "2h 5m",
+    "runtime_mins": 125,
     "src": "/mcu/ant_man_and_the_wasp_quantumania.jpg",
     "title": "Ant-Man and The Wasp: Quantumania"
   }

@@ -1,12 +1,12 @@
-const imageBaseUrl = 'https://cdn-rorpage-01.azureedge.net/images';
+const imageBaseUrl = 'https://sancusrorpage.blob.core.windows.net/images';
 
 Handlebars.registerPartial(
   'movie',
   '<li class="collection-item avatar">'
-    + `<img src="${imageBaseUrl}{{src}}" alt="{{title}}" class="circle">`
-    + '<span class="title {{#if is_skipped}}gray{{/if}}">{{title}}</span>'
-    + '<div class="subtitle">{{release_date}} &#183; {{runtime}}</div>'
-    + '</li>'
+  + `<img src="${imageBaseUrl}{{src}}" alt="{{title}}" class="circle">`
+  + '<span class="title {{#if is_skipped}}gray{{/if}}">{{title}}</span>'
+  + '<div class="subtitle">{{release_date}} &#183; {{runtime}}</div>'
+  + '</li>'
 );
 
 const itemListHtml = '<ul class="collection">'
