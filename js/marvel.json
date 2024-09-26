@@ -1,5 +1,6 @@
 [
   {
+    "imdb_id": "tt0458339",
     "rating": "PG-13",
     "release_date": "July 22, 2011",
     "release_date_raw": "2011-07-22",
@@ -9,6 +10,7 @@
     "title": "Captain America: The First Avenger"
   },
   {
+    "imdb_id": "tt4154664",
     "rating": "PG-13",
     "release_date": "March 8, 2019",
     "release_date_raw": "2019-03-08",
@@ -18,6 +20,7 @@
     "title": "Captain Marvel"
   },
   {
+    "imdb_id": "tt0371746",
     "rating": "PG-13",
     "release_date": "May 2, 2008",
     "release_date_raw": "2008-05-02",
@@ -27,6 +30,7 @@
     "title": "Iron Man"
   },
   {
+    "imdb_id": "tt1228705",
     "rating": "PG-13",
     "release_date": "May 7, 2010",
     "release_date_raw": "2010-05-07",
@@ -36,6 +40,7 @@
     "title": "Iron Man 2"
   },
   {
+    "imdb_id": "tt0800369",
     "rating": "PG-13",
     "release_date": "May 6, 2011",
     "release_date_raw": "2011-05-06",
@@ -45,6 +50,7 @@
     "title": "Thor"
   },
   {
+    "imdb_id": "tt0848228",
     "rating": "PG-13",
     "release_date": "May 4, 2012",
     "release_date_raw": "2012-05-04",
@@ -54,6 +60,7 @@
     "title": "Avengers"
   },
   {
+    "imdb_id": "tt1981115",
     "rating": "PG-13",
     "release_date": "November 8, 2013",
     "release_date_raw": "2013-11-08",
@@ -63,6 +70,7 @@
     "title": "Thor: The Dark World"
   },
   {
+    "imdb_id": "tt1300854",
     "rating": "PG-13",
     "release_date": "May 3, 2013",
     "release_date_raw": "2013-05-03",
@@ -72,6 +80,7 @@
     "title": "Iron Man 3"
   },
   {
+    "imdb_id": "tt1843866",
     "rating": "PG-13",
     "release_date": "April 4, 2014",
     "release_date_raw": "2014-04-04",
@@ -81,6 +90,7 @@
     "title": "Captain America: The Winter Soldier"
   },
   {
+    "imdb_id": "tt2015381",
     "rating": "PG-13",
     "release_date": "August 1, 2014",
     "release_date_raw": "2014-08-01",
@@ -90,6 +100,7 @@
     "title": "Guardians of the Galaxy"
   },
   {
+    "imdb_id": "tt3896198",
     "rating": "PG-13",
     "release_date": "May 5, 2017",
     "release_date_raw": "2017-05-05",
@@ -99,6 +110,7 @@
     "title": "Guardians of the Galaxy Vol. 2"
   },
   {
+    "imdb_id": "tt2395427",
     "rating": "PG-13",
     "release_date": "May 1, 2015",
     "release_date_raw": "2015-05-01",
@@ -108,6 +120,7 @@
     "title": "Avengers: Age of Ultron"
   },
   {
+    "imdb_id": "tt0478970",
     "rating": "PG-13",
     "release_date": "July 17, 2015",
     "release_date_raw": "2015-07-17",
@@ -117,6 +130,7 @@
     "title": "Ant-Man"
   },
   {
+    "imdb_id": "tt3498820",
     "rating": "PG-13",
     "release_date": "May 6, 2016",
     "release_date_raw": "2016-05-06",
@@ -126,6 +140,7 @@
     "title": "Captain America: Civil War"
   },
   {
+    "imdb_id": "tt1825683",
     "rating": "PG-13",
     "release_date": "February 16, 2018",
     "release_date_raw": "2018-02-16",
@@ -135,6 +150,7 @@
     "title": "Black Panther"
   },
   {
+    "imdb_id": "tt2250912",
     "rating": "PG-13",
     "release_date": "July 7, 2017",
     "release_date_raw": "2017-07-07",
@@ -144,6 +160,7 @@
     "title": "Spider-Man: Homecoming"
   },
   {
+    "imdb_id": "tt3480822",
     "rating": "PG-13",
     "release_date": "July 9, 2021",
     "release_date_raw": "2021-07-09",
@@ -153,6 +170,7 @@
     "title": "Black Widow"
   },
   {
+    "imdb_id": "tt1211837",
     "rating": "PG-13",
     "release_date": "November 4, 2016",
     "release_date_raw": "2016-11-04",
@@ -162,6 +180,7 @@
     "title": "Doctor Strange"
   },
   {
+    "imdb_id": "tt3501632",
     "rating": "PG-13",
     "release_date": "November 3, 2017",
     "release_date_raw": "2017-11-03",
@@ -171,6 +190,7 @@
     "title": "Thor: Ragnarok"
   },
   {
+    "imdb_id": "tt5095030",
     "rating": "PG-13",
     "release_date": "July 6, 2018",
     "release_date_raw": "2018-07-06",
@@ -180,6 +200,7 @@
     "title": "Ant-Man and the Wasp"
   },
   {
+    "imdb_id": "tt4154756",
     "rating": "PG-13",
     "release_date": "April 27, 2018",
     "release_date_raw": "2018-04-27",
@@ -189,6 +210,7 @@
     "title": "Avengers: Infinity War"
   },
   {
+    "imdb_id": "tt4154796",
     "rating": "PG-13",
     "release_date": "April 26, 2019",
     "release_date_raw": "2019-04-26",
@@ -198,6 +220,7 @@
     "title": "Avengers: Endgame"
   },
   {
+    "imdb_id": "tt6320628",
     "rating": "PG-13",
     "release_date": "July 2, 2019",
     "release_date_raw": "2019-07-02",
@@ -207,6 +230,7 @@
     "title": "Spider-Man: Far from Home"
   },
   {
+    "imdb_id": "tt10872600",
     "rating": "PG-13",
     "release_date": "December 17, 2021",
     "release_date_raw": "2021-12-17",
@@ -216,6 +240,7 @@
     "title": "Spider-Man: No Way Home"
   },
   {
+    "imdb_id": "tt9376612",
     "rating": "PG-13",
     "release_date": "September 3, 2021",
     "release_date_raw": "2021-09-03",
@@ -225,6 +250,7 @@
     "title": "Shang-Chi and the Legend of the Ten Rings"
   },
   {
+    "imdb_id": "tt9114286",
     "rating": "PG-13",
     "release_date": "November 11, 2022",
     "release_date_raw": "2022-11-11",
@@ -234,6 +260,7 @@
     "title": "Black Panther: Wakanda Forever"
   },
   {
+    "imdb_id": "tt6791350",
     "rating": "PG-13",
     "release_date": "May 5, 2023",
     "release_date_raw": "2023-05-05",
@@ -241,5 +268,15 @@
     "runtime_mins": 149,
     "src": "/mcu/guardians_of_the_galaxy_3.jpg",
     "title": "Guardians of the Galaxy Vol. 3"
+  },
+  {
+    "imdb_id": "tt10676048",
+    "rating": "PG-13",
+    "release_date": "November 10, 2023",
+    "release_date_raw": "2023-11-10",
+    "runtime": "1h 45m",
+    "runtime_mins": 105,
+    "src": "/mcu/the_marvels.png",
+    "title": "The Marvels"
   }
 ]

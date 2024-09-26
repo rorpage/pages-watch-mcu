@@ -5,7 +5,11 @@ Handlebars.registerPartial(
   '<li class="collection-item avatar">'
   + `<img src="${imageBaseUrl}{{src}}" alt="{{title}}" class="circle">`
   + '<span class="title {{#if is_skipped}}gray{{/if}}">{{title}}</span>'
-  + '<div class="subtitle">{{release_date}} &#183; {{runtime}}</div>'
+  + '<div class="subtitle">'
+  + '{{release_date}} &#183; '
+  + '{{runtime}} &#183; '
+  + '<a href="https://www.imdb.com/title/{{imdb_id}}" target="_blank">Info</a>'
+  + '</div>'
   + '</li>'
 );
 
@@ -58,7 +62,9 @@ function renderUpNextMoviePoster(upNextMovie) {
   poster.alt = upNextMovie.title;
 
   const subtitle = instance.querySelector('.subtitle');
-  subtitle.innerHTML = `${upNextMovie.release_date} &#183; ${upNextMovie.runtime}`;
+  subtitle.innerHTML = `${upNextMovie.release_date} &#183; ` +
+    `${upNextMovie.runtime} &#183; ` +
+    `<a href="https://www.imdb.com/title/${upNextMovie.imdb_id}" target="_blank">Info</a>`;
 
   const posterElement = document.getElementById('card-image');
   posterElement.appendChild(instance);
