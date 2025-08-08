@@ -1,8 +1,8 @@
-const marvel = require('../js/marvel.json');
-const skipped_marvel = require('../js/skipped_marvel.json');
+import marvel from '../js/marvel.json' with { type: 'json' };
+import skipped_marvel from '../js/skipped_marvel.json' with { type: 'json' };
 
-const KeyvRedis = require('@keyv/redis');
-const Keyv = require('keyv');
+import KeyvRedis from '@keyv/redis';
+import Keyv from 'keyv';
 
 export default async function handler(req, res) {
   const host = process.env.REDIS_URL || 'redis://localhost:6379';
