@@ -1,4 +1,4 @@
-const imageBaseUrl = 'https://sancusrorpage.blob.core.windows.net/images';
+const imageBaseUrl = 'images';
 
 Handlebars.registerPartial(
   'movie',
