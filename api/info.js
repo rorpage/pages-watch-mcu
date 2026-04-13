@@ -1,18 +1,15 @@
 import marvel from '../js/marvel.json' with { type: 'json' };
 import skipped_marvel from '../js/skipped_marvel.json' with { type: 'json' };
 
-import KeyvRedis from '@keyv/redis';
-import Keyv from 'keyv';
+import { Redis } from '@upstash/redis';
 
 export default async function handler(req, res) {
-  const host = process.env.REDIS_URL || 'redis://localhost:6379';
+  const redis = new Redis({
+    url: process.env.UPSTASH_REDIS_REST_URL,
+    token: process.env.UPSTASH_REDIS_REST_TOKEN,
+  });
 
-  const keyvRedis = new KeyvRedis(host);
-  const mcu = new Keyv({ namespace: 'mcu', store: keyvRedis });
-
-  mcu.on('error', err => console.log('Connection Error', err));
-
-  const data = await mcu.get('data');
+  const data = await redis.get('mcu:data');
 
   const up_next = marvel[data.index] ?? null;
 
