@@ -4,7 +4,7 @@ Handlebars.registerPartial(
   'movie',
   '<li class="collection-item avatar">'
   + `<img src="${imageBaseUrl}{{src}}" alt="{{title}}" class="circle">`
-  + '<span class="title {{#if is_skipped}}gray{{/if}}">{{title}}</span>'
+  + '<span class="title {{#if is_skipped}}gray{{/if}}">{{#if number}}{{number}}. {{/if}}{{title}}</span>'
   + '<div class="subtitle">'
   + '{{release_date}} &#183; '
   + '{{runtime}} &#183; '
@@ -34,7 +34,7 @@ function renderLists(data) {
   renderUpNextMoviePoster(data.movies.up_next);
 
   const index = data.index;
-  const movies = data.movies.all_movies;
+  const movies = data.movies.all_movies.map((movie, i) => ({ ...movie, number: i + 1 }));
   let watchedMovies = movies.slice(0, index);
 
   // Add not watched or skipped movies
