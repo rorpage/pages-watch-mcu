@@ -1,66 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>The Pages Watch MCU</title>
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700|Roboto+Slab:100,300,400,700" />
-  <link rel="stylesheet" href="css/materialize.min.css" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Pages Watch MCU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="css/tailwind.css" />
 </head>
 <body>
-  <div class="container">
+  <div class="mx-auto max-w-5xl px-4 py-10 text-center sm:py-16">
 
-    <div id="title"></div>
+    <header class="mb-12 sm:mb-16">
+      <div id="title"></div>
+    </header>
 
-    <div id="up-next">
-      <h4>Up Next</h4>
-      <div class="row">
-        <div class="col s12 m4 offset-m4 l4 offset-l4">
-          <div class="card">
-            <div class="card-image">
-              <div id="card-image"></div>
-            </div>
-            <div class="card-content">
-              <h5>Followed by:</h5>
-              <div id="upcoming-movies"></div>
-            </div>
+    <section id="up-next" class="mb-16 sm:mb-20">
+      <h2 class="section-heading">Up Next</h2>
+      <div class="mx-auto max-w-md sm:max-w-3xl">
+        <div class="hero-card">
+          <div id="card-image" class="hero-card-poster"></div>
+          <div class="hero-card-body">
+            <h3 class="hero-card-label">Followed by</h3>
+            <div id="upcoming-movies"></div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div id="previously-watched">
-      <h4>Previously Watched</h4>
-      <div class="row">
-        <div class="col s12 m4 offset-m4 l4 offset-l4">
-          <div class="card">
-            <div class="card-content">
-              <h5 id="start-date"></h5>
-              <div id="watched-movies"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <section id="previously-watched">
+      <h2 class="section-heading">Previously Watched</h2>
+      <p id="start-date" class="mb-6 text-sm text-white/70 sm:mb-8"></p>
+      <div id="watched-movies"></div>
+    </section>
 
   </div>
 
   <template id="up-next-movie">
     <img class="full-poster" src="" alt="{{title}}" />
-    <div class="subtitle"></div>
+    <p class="hero-card-caption"></p>
   </template>
 
-  <template id="movies">
-    <ul class="collection">
-      <li class="collection-item avatar">
-        <img src="" alt="{{title}}" class="circle">
-        <span class="title">{{title}}</span>
-        <div class="subtitle"></div>
-      </li>
-    </ul>
-  </template>
-
-  <script src="js/materialize.min.js"></script>
   <script src="js/handlebars.js"></script>
   <script src="js/assemble.js"></script>
 
