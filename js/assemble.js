@@ -24,7 +24,10 @@ const compiledPosterGrid = Handlebars.compile(posterGridHtml);
 Handlebars.registerPartial(
   'movieRow',
   '<li class="movie-row">'
+  + '<span class="movie-row-thumb-wrap">'
   + `<img src="${imageBaseUrl}{{src}}" alt="{{title}}" loading="lazy" class="movie-row-thumb" />`
+  + '{{#if number}}<span class="movie-row-badge">{{number}}</span>{{/if}}'
+  + '</span>'
   + '<span class="movie-row-body">'
   + '<span class="movie-row-title">{{title}}</span>'
   + '<span class="movie-row-meta">'
@@ -48,7 +51,7 @@ fetch('api/info')
 function renderLists(data) {
   document.documentElement.style.setProperty('--brand', data.background_color);
 
-  document.getElementById('title').innerHTML = `<h1 class="font-display text-5xl tracking-wide sm:text-6xl">${data.title}</h1>`;
+  document.getElementById('title').innerHTML = `<h1 class="font-display text-7xl tracking-wide sm:text-8xl md:text-9xl">${data.title}</h1>`;
   document.getElementById('start-date').innerHTML = `Started ${data.start_date}`;
 
   renderUpNextMoviePoster(data.movies.up_next);

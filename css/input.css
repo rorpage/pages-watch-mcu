@@ -59,8 +59,16 @@
     @apply flex items-center gap-3 py-3 first:pt-0 last:pb-0;
   }
 
+  .movie-row-thumb-wrap {
+    @apply relative flex-shrink-0;
+  }
+
   .movie-row-thumb {
-    @apply h-12 w-12 flex-shrink-0 rounded-full object-cover ring-2 ring-red-700/10;
+    @apply h-12 w-12 rounded-full object-cover ring-2 ring-red-700/10;
+  }
+
+  .movie-row-badge {
+    @apply absolute -bottom-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-700 text-[10px] font-bold text-white ring-2 ring-white;
   }
 
   .movie-row-body {
