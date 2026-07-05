@@ -1,48 +1,44 @@
 const imageBaseUrl = 'images';
 
-Handlebars.registerPartial(
-  'posterTile',
-  '<li class="movie-tile group{{#if is_skipped}} movie-tile--skipped{{/if}}">'
-  + `<a class="movie-tile-link" href="https://www.imdb.com/title/{{imdb_id}}" target="_blank" rel="noopener">`
-  + '<div class="movie-tile-frame">'
-  + `<img src="${imageBaseUrl}{{src}}" alt="{{title}}" loading="lazy" class="movie-tile-img" />`
-  + '{{#if number}}<span class="movie-tile-badge">{{number}}</span>{{/if}}'
-  + '{{#if is_skipped}}<span class="movie-tile-skipped-badge">Skipped</span>{{/if}}'
-  + '</div>'
-  + '<p class="movie-tile-title">{{title}}</p>'
-  + '<p class="movie-tile-meta">{{release_date}} &#183; {{runtime}}</p>'
-  + '</a>'
-  + '</li>'
-);
+function posterTileHtml(movie) {
+  return '<li class="movie-tile group' + (movie.is_skipped ? ' movie-tile--skipped' : '') + '">'
+    + `<a class="movie-tile-link" href="https://www.imdb.com/title/${movie.imdb_id}" target="_blank" rel="noopener">`
+    + '<div class="movie-tile-frame">'
+    + `<img src="${imageBaseUrl}${movie.src}" alt="${movie.title}" loading="lazy" class="movie-tile-img" />`
+    + (movie.number ? `<span class="movie-tile-badge">${movie.number}</span>` : '')
+    + (movie.is_skipped ? '<span class="movie-tile-skipped-badge">Skipped</span>' : '')
+    + '</div>'
+    + `<p class="movie-tile-title">${movie.title}</p>`
+    + `<p class="movie-tile-meta">${movie.release_date} &#183; ${movie.runtime}</p>`
+    + '</a>'
+    + '</li>';
+}
 
-const posterGridHtml = '<ul class="movie-grid">'
-  + '{{#each movies}}{{>posterTile .}}{{else}}<li class="text-white/70">None yet!</li>{{/each}}'
-  + '</ul>';
+function posterGridHtml(movies) {
+  if (!movies.length) return '<p class="text-white/70">None yet!</p>';
+  return `<ul class="movie-grid">${movies.map(posterTileHtml).join('')}</ul>`;
+}
 
-const compiledPosterGrid = Handlebars.compile(posterGridHtml);
+function movieRowHtml(movie) {
+  return '<li class="movie-row">'
+    + '<span class="movie-row-thumb-wrap">'
+    + `<img src="${imageBaseUrl}${movie.src}" alt="${movie.title}" loading="lazy" class="movie-row-thumb" />`
+    + (movie.number ? `<span class="movie-row-badge">${movie.number}</span>` : '')
+    + '</span>'
+    + '<span class="movie-row-body">'
+    + `<span class="movie-row-title">${movie.title}</span>`
+    + '<span class="movie-row-meta">'
+    + `${movie.release_date} &#183; ${movie.runtime} &#183; `
+    + `<a href="https://www.imdb.com/title/${movie.imdb_id}" target="_blank" rel="noopener" class="movie-row-link">Info</a>`
+    + '</span>'
+    + '</span>'
+    + '</li>';
+}
 
-Handlebars.registerPartial(
-  'movieRow',
-  '<li class="movie-row">'
-  + '<span class="movie-row-thumb-wrap">'
-  + `<img src="${imageBaseUrl}{{src}}" alt="{{title}}" loading="lazy" class="movie-row-thumb" />`
-  + '{{#if number}}<span class="movie-row-badge">{{number}}</span>{{/if}}'
-  + '</span>'
-  + '<span class="movie-row-body">'
-  + '<span class="movie-row-title">{{title}}</span>'
-  + '<span class="movie-row-meta">'
-  + '{{release_date}} &#183; {{runtime}} &#183; '
-  + '<a href="https://www.imdb.com/title/{{imdb_id}}" target="_blank" rel="noopener" class="movie-row-link">Info</a>'
-  + '</span>'
-  + '</span>'
-  + '</li>'
-);
-
-const movieListHtml = '<ul class="movie-list">'
-  + '{{#each movies}}{{>movieRow .}}{{else}}<li class="text-white/70">Nothing yet!</li>{{/each}}'
-  + '</ul>';
-
-const compiledMovieList = Handlebars.compile(movieListHtml);
+function movieListHtml(movies) {
+  if (!movies.length) return '<p class="text-white/70">Nothing yet!</p>';
+  return `<ul class="movie-list">${movies.map(movieRowHtml).join('')}</ul>`;
+}
 
 fetch('api/info')
   .then(response => response.json())
@@ -64,10 +60,10 @@ function renderLists(data) {
     watchedMovies.push({ ...movie, is_skipped: true });
   });
 
-  document.getElementById('watched-movies').innerHTML = compiledPosterGrid({ movies: watchedMovies });
+  document.getElementById('watched-movies').innerHTML = posterGridHtml(watchedMovies);
 
   const upcomingMovies = movies.slice(index + 1);
-  document.getElementById('upcoming-movies').innerHTML = compiledMovieList({ movies: upcomingMovies });
+  document.getElementById('upcoming-movies').innerHTML = movieListHtml(upcomingMovies);
 }
 
 function renderUpNextMoviePoster(upNextMovie) {
