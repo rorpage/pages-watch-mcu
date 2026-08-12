@@ -2,7 +2,7 @@ const imageBaseUrl = 'images';
 
 function posterTileHtml(movie) {
   return '<li class="movie-tile group' + (movie.is_skipped ? ' movie-tile--skipped' : '') + '">'
-    + `<a class="movie-tile-link" href="https://www.imdb.com/title/${movie.imdb_id}" target="_blank" rel="noopener">`
+    + `<a class="movie-tile-link" href="https://www.imdb.com/title/${movie.external_ids.imdb_id}" target="_blank" rel="noopener">`
     + '<div class="movie-tile-frame">'
     + `<img src="${imageBaseUrl}${movie.src}" alt="${movie.title}" loading="lazy" class="movie-tile-img" />`
     + (movie.number ? `<span class="movie-tile-badge">${movie.number}</span>` : '')
@@ -29,7 +29,7 @@ function movieRowHtml(movie) {
     + `<span class="movie-row-title">${movie.title}</span>`
     + '<span class="movie-row-meta">'
     + `${movie.release_date} &#183; ${movie.runtime} &#183; `
-    + `<a href="https://www.imdb.com/title/${movie.imdb_id}" target="_blank" rel="noopener" class="movie-row-link">Info</a>`
+    + `<a href="https://www.imdb.com/title/${movie.external_ids.imdb_id}" target="_blank" rel="noopener" class="movie-row-link">Info</a>`
     + '</span>'
     + '</span>'
     + '</li>';
@@ -79,7 +79,7 @@ function renderUpNextMoviePoster(upNextMovie) {
   const caption = instance.querySelector('.hero-card-caption');
   caption.innerHTML = `${upNextMovie.release_date} &#183; ` +
     `${upNextMovie.runtime} &#183; ` +
-    `<a href="https://www.imdb.com/title/${upNextMovie.imdb_id}" target="_blank" rel="noopener" class="movie-row-link">Info</a>`;
+    `<a href="https://www.imdb.com/title/${upNextMovie.external_ids.imdb_id}" target="_blank" rel="noopener" class="movie-row-link">Info</a>`;
 
   document.getElementById('card-image').appendChild(instance);
 }
