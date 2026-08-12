@@ -7,7 +7,8 @@
     "runtime": "2h 36m",
     "runtime_mins": 156,
     "src": "/mcu/eternals.jpg",
-    "title": "Eternals"
+    "title": "Eternals",
+    "tmdb_id": 524434
   },
   {
     "imdb_id": "tt9419884",
@@ -17,7 +18,8 @@
     "runtime": "2h 6m",
     "runtime_mins": 126,
     "src": "/mcu/doctor_strange_in_the_multiverse_of_madness.jpg",
-    "title": "Doctor Strange in the Multiverse of Madness"
+    "title": "Doctor Strange in the Multiverse of Madness",
+    "tmdb_id": 453395
   },
   {
     "imdb_id": "tt10648342",
@@ -27,7 +29,8 @@
     "runtime": "1h 58m",
     "runtime_mins": 118,
     "src": "/mcu/thor_love_and_thunder.jpg",
-    "title": "Thor: Love and Thunder"
+    "title": "Thor: Love and Thunder",
+    "tmdb_id": 616037
   },
   {
     "imdb_id": "tt10954600",
@@ -37,6 +40,7 @@
     "runtime": "2h 5m",
     "runtime_mins": 125,
     "src": "/mcu/ant_man_and_the_wasp_quantumania.jpg",
-    "title": "Ant-Man and The Wasp: Quantumania"
+    "title": "Ant-Man and The Wasp: Quantumania",
+    "tmdb_id": 640146
   }
 ]
